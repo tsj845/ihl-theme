@@ -1,0 +1,53 @@
+{
+    "semanticHighlighting" : true,
+    "tokenColors" : [
+        {
+            "scope" : "source",
+            "settings" : {
+                "foreground" : "#d4d4d4"
+            }
+        },
+        {
+            "scope" : ["string"],
+            "settings" : {
+                "foreground" : "#d89845"
+            }
+        },
+        {
+            "scope" : ["entity.name.type.class", "entity.name.type"],
+            "settings" : {
+                "foreground" : "#36c7cc"
+            }
+        },
+        {
+            "scope" : ["storage.type", "variable.language", "constant", "keyword", "operator.math.ihl", "dollar.ihl"],
+            "settings" : {
+                "foreground" : "#569cd6"
+            }
+        },
+        {
+            "scope" : "constant.numeric",
+            "settings" : {
+                "foreground" : "#b5cea8"
+            }
+        },
+        {
+            "scope" : "comment",
+            "settings" : {
+                "foreground" : "#23a323"
+            }
+        },
+        {
+            "scope" : "constant.language.json.comments",
+            "settings" : {
+                "foreground" : "#19dcff"
+            }
+        },
+        {
+            "scope" : "keyword.debug.ihl",
+            "settings" : {
+                "foreground" : "#ca4eca"
+            }
+        }
+    ]
+}

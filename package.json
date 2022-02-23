@@ -1,0 +1,31 @@
+{
+    "name": "ihltheme",
+    "displayName": "ihl colors",
+    "description": "syntax highlighting for .ihl files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ihl",
+            "aliases": ["ihl", "ihl"],
+            "extensions": [".ihl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ihl",
+            "scopeName": "source.ihl",
+            "path": "./syntaxes/ihl.tmLanguage.json"
+        }],
+        "themes": [{
+            "id": "ihl-theme",
+            "label": "ihl dark",
+            "path": "./colorthemes/ihldark-color-theme.json",
+            "uiTheme": "vs-dark"
+        }]
+    }
+}

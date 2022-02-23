@@ -1,0 +1,64 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ihl",
+	"patterns": [
+		{"include": "#main"}
+	],
+	"repository": {
+		"main": {
+			"patterns": [
+				{"include": "#keywords"},
+				{"include": "#strings"},
+				{"include": "#comments"},
+				{"include": "#numbers"},
+                {"include": "#operators"},
+                {"include": "#dollar"},
+                {"include": "#debug"}
+			]
+		},
+        "dollar": {
+            "patterns": [{
+                "name": "dollar.ihl",
+                "match": "\\$(?={|\\[)"
+            }]
+        },
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.ihl",
+				"match": "\\b(print|of|global|local)\\b"
+			}]
+		},
+        "debug": {
+            "patterns": [{
+                "name": "keyword.debug.ihl",
+                "match": "\\b(dumpscope)\\b"
+            }]
+        },
+        "operators": {
+            "patterns": [{
+                "name": "operator.math.ihl",
+                "match": "-|\\+|\\*|/|="
+            }]
+        },
+		"strings": {
+			"name": "string.quoted.double.ihl",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ihl",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.ihl",
+			"match": "//.*$"
+		},
+		"numbers": {
+			"name": "constant.numeric.ihl",
+			"match": "((?<![a-zA-Z_])[0-9]+(\\.[0-9]+)?)(?![a-zA-Z])"
+        }
+	},
+	"scopeName": "source.ihl"
+}
