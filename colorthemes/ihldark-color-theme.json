@@ -2,7 +2,13 @@
     "semanticHighlighting" : true,
     "tokenColors" : [
         {
-            "scope" : "source",
+            "scope" : ["meta.tag.ihl"],
+            "settings" : {
+                "foreground" : "#45afff"
+            }
+        },
+        {
+            "scope" : ["source", "meta.tag.escaped.ihl"],
             "settings" : {
                 "foreground" : "#d4d4d4"
             }
@@ -20,7 +26,7 @@
             }
         },
         {
-            "scope" : ["storage.type", "variable.language", "constant", "keyword", "operator.math.ihl", "dollar.ihl"],
+            "scope" : ["storage.type", "variable.language", "constant", "keyword", "operator.math.ihl", "dollar.ihl", "storage.modifier.mut.rust", "storage.modifier.rust"],
             "settings" : {
                 "foreground" : "#569cd6"
             }
@@ -46,7 +52,32 @@
         {
             "scope" : "keyword.debug.ihl",
             "settings" : {
-                "foreground" : "#ca4eca"
+                "foreground" : "#d68fd6"
+            }
+        },
+        {
+            "scope" : "punctuation.definition.lifetime.rust",
+            "settings" : {
+                "foreground" : "#ffcb3d"
+            }
+        },
+        {
+            "scope" : "variable.other.rust",
+            "settings" : {
+                "foreground" : "#a08bec"
+            }
+        },
+        {
+            "scope" : ["entity.name.function.rust", "meta.macro.rust"],
+            "settings" : {
+                "foreground" : "#6db5ca"
+            }
+        },
+        {
+            "scope" : "constant.other.caps.rust",
+            "settings" : {
+                "foreground" : "#c685d3"
+                // "foreground" : "#ee89b8"
             }
         }
     ]

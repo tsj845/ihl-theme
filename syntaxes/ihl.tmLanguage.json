@@ -2,6 +2,7 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "ihl",
 	"patterns": [
+        {"include": "#options"},
 		{"include": "#main"}
 	],
 	"repository": {
@@ -16,29 +17,33 @@
                 {"include": "#debug"}
 			]
 		},
+        "options": {
+            "name": "meta.tag.ihl",
+            "begin": "^#\\[",
+            "end": "]$",
+            "patterns": [
+                {
+                    "name": "meta.tag.escaped.ihl",
+                    "match": ".*(?=])"
+                },
+                {"include": "#main"}
+            ]
+        },
         "dollar": {
-            "patterns": [{
-                "name": "dollar.ihl",
-                "match": "\\$(?={|\\[)"
-            }]
+            "name": "dollar.ihl",
+            "match": "\\$(?={|\\[)"
         },
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.ihl",
-				"match": "\\b(print|of|global|local)\\b"
-			}]
+			"name": "keyword.control.ihl",
+			"match": "\\b(print|of|global|local|func|rm|garbage|return)\\b"
 		},
         "debug": {
-            "patterns": [{
-                "name": "keyword.debug.ihl",
-                "match": "\\b(dumpscope)\\b"
-            }]
+            "name": "keyword.debug.ihl",
+            "match": "\\b(dumpscope|log)\\b"
         },
         "operators": {
-            "patterns": [{
-                "name": "operator.math.ihl",
-                "match": "-|\\+|\\*|/|="
-            }]
+            "name": "operator.math.ihl",
+            "match": "-|\\+|\\*|/|="
         },
 		"strings": {
 			"name": "string.quoted.double.ihl",
