@@ -14,8 +14,13 @@
 				{"include": "#numbers"},
                 {"include": "#operators"},
                 {"include": "#dollar"},
-                {"include": "#debug"}
+                {"include": "#debug"},
+				{"include": "#halter"}
 			]
+		},
+		"halter": {
+			"name": "halter.ihl",
+			"match": "\\b(HALT)\\b"
 		},
         "options": {
             "name": "meta.tag.ihl",
