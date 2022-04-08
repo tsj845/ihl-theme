@@ -28,11 +28,11 @@
             "begin": "^#\\[",
             "end": "]$",
             "patterns": [
-                {
+				{"include": "#main"},
+				{
                     "name": "meta.tag.escaped.ihl",
-                    "match": ".*(?=])"
-                },
-                {"include": "#main"}
+                    "match": "(?<=^#\\[).*=(?=.*]$)"
+                }
             ]
         },
         "dollar": {
@@ -41,11 +41,11 @@
         },
 		"keywords": {
 			"name": "keyword.control.ihl",
-			"match": "\\b(print|global|local|func|rm|garbage|return|for|while|if|else|linkup|module|parent|unique|readonly|private|class|in)\\b"
+			"match": "\\b(print|global|local|func|rm|garbage|return|for|while|if|else|linkup|module|parent|unique|readonly|private|class|in|property|method|inheriting|from|self|create|static)\\b"
 		},
         "debug": {
             "name": "keyword.debug.ihl",
-            "match": "\\b(dumpscope|dumptoks|log|dumpflags|dumplc)\\b"
+            "match": "\\b(dumpscope|dumptoks|log|dumpflags|dumplc|dumpobj)\\b"
         },
         "operators": {
             "name": "operator.math.ihl",
