@@ -15,11 +15,12 @@
                 {"include": "#operators"},
                 {"include": "#dollar"},
                 {"include": "#debug"},
-				{"include": "#halter"}
+				{"include": "#literals"},
+				{"include": "#error"}
 			]
 		},
-		"halter": {
-			"name": "halter.ihl",
+		"error": {
+			"name": "error.ihl",
 			"match": "\\b(HALT)\\b"
 		},
         "options": {
@@ -36,19 +37,19 @@
         },
         "dollar": {
             "name": "dollar.ihl",
-            "match": "\\$(?={|\\[)"
+            "match": "\\$(?={|\\[|\\w)"
         },
 		"keywords": {
 			"name": "keyword.control.ihl",
-			"match": "\\b(print|of|global|local|func|rm|garbage|return)\\b"
+			"match": "\\b(print|global|local|func|rm|garbage|return|for|while|if|else|linkup|module|parent|unique|readonly|private|class|in)\\b"
 		},
         "debug": {
             "name": "keyword.debug.ihl",
-            "match": "\\b(dumpscope|log)\\b"
+            "match": "\\b(dumpscope|dumptoks|log|dumpflags|dumplc)\\b"
         },
         "operators": {
             "name": "operator.math.ihl",
-            "match": "-|\\+|\\*|/|="
+            "match": "[-+*/=|&^%!<>]"
         },
 		"strings": {
 			"name": "string.quoted.double.ihl",
@@ -68,7 +69,11 @@
 		"numbers": {
 			"name": "constant.numeric.ihl",
 			"match": "((?<![a-zA-Z_])[0-9]+(\\.[0-9]+)?)(?![a-zA-Z])"
-        }
+        },
+		"literals": {
+			"name": "constant.other.ihl",
+			"match": "\\b(true|false|null)\\b"
+		}
 	},
 	"scopeName": "source.ihl"
 }

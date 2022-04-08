@@ -26,7 +26,7 @@
             }
         },
         {
-            "scope" : ["entity.name.type.class", "entity.name.type"],
+            "scope" : ["entity.name.type.class", "entity.name.type", "constant.other.ihl"],
             "settings" : {
                 "foreground" : "#36c7cc"
             }
@@ -84,6 +84,12 @@
             "settings" : {
                 "foreground" : "#c685d3"
                 // "foreground" : "#ee89b8"
+            }
+        },
+        {
+            "scope" : "error.ihl",
+            "settings" : {
+                "foreground" : "#c83232"
             }
         }
     ]
