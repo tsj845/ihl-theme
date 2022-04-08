@@ -2,6 +2,12 @@
     "semanticHighlighting" : true,
     "tokenColors" : [
         {
+            "scope" : "halter.ihl",
+            "settings" : {
+                "foreground" : "#c83232"
+            }
+        },
+        {
             "scope" : ["meta.tag.ihl"],
             "settings" : {
                 "foreground" : "#45afff"
